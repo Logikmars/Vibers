@@ -4,6 +4,7 @@ import Hero from "./Components/Hero/Hero"
 import HowIt from "./Components/HowIt/HowIt"
 import Join from "./Components/Join/Join"
 import WhatIs from "./Components/WhatIs/WhatIs"
+import BallPit from "./Components/BallPit/BallPit"
 
 
 function App() {

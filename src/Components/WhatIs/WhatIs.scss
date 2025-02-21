@@ -1,37 +1,45 @@
-.WhatIs{
+.WhatIs {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95% !important;
     padding-top: 72px !important;
-    @media (max-width: 800px){
+    gap: 12px;
+
+    @media (max-width: 800px) {
         flex-wrap: wrap;
     }
-    &__content{
+
+    &__content {
         width: 50%;
         max-width: 450px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             width: 100%;
             order: 2;
         }
-        &-description{
+
+        &-description {
             font-size: 20px;
             color: rgba($color: #ffffff, $alpha: .7);
-            @media(max-width: 800px){
+
+            @media(max-width: 800px) {
                 font-size: 16px;
             }
         }
     }
-    img{
-        @media(max-width: 1200px){
+
+    img {
+        @media(max-width: 1200px) {
             width: 50%;
             min-width: 300px;
         }
-        @media(max-width: 800px){
+
+        @media(max-width: 800px) {
             order: 1;
             width: 100%;
             min-width: 0 !important;

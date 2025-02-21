@@ -1,46 +1,54 @@
-.Footer{
+.Footer {
     padding-top: 72px !important;
-    padding-bottom: 24px;
+    padding-bottom: 24px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    &__item{
+
+    &__item {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &-nav{
+
+        &-nav {
             display: flex;
             gap: 12px;
         }
-        img{
-            @media(max-width: 700px){
+
+        img {
+            @media(max-width: 700px) {
                 width: 40px;
                 height: 40px;
             }
         }
     }
-    &__policy{
+
+    &__policy {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media (max-width: 700px){
+
+        @media (max-width: 700px) {
             justify-content: center;
             flex-wrap: wrap;
         }
-        &-copy{
+
+        &-copy {
             color: rgba($color: #FFFFFF, $alpha: .4);
             font-size: 12px;
             font-weight: 400;
-            @media (max-width: 700px){
+
+            @media (max-width: 700px) {
                 width: 100%;
                 text-align: center;
             }
         }
-        &-policy{
+
+        &-policy {
             cursor: pointer;
             font-size: 12px;
             color: rgba($color: #FFFFFF, $alpha: .9);

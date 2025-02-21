@@ -1,72 +1,95 @@
-.Hero{
+.Hero {
     background-color: #11A950;
     border-radius: 40px;
     padding: 40px !important;
     display: flex;
     flex-wrap: wrap;
     width: 95% !important;
-    &__content{
+    overflow: hidden;
+    height: 700px;
+
+    &_balls {
+        width: 100% !important;
+        align-items: start !important;
+        top: -40px;
+    }
+
+    &__content {
         width: 60%;
         gap: 100px;
         display: flex;
         flex-wrap: wrap;
-        @media (max-width: 1000px){
+
+        @media (max-width: 1000px) {
             order: 1;
             width: 100%;
             gap: 60px;
         }
-        &-wrapper{
+
+        &-wrapper {
             display: flex;
             flex-wrap: wrap;
             gap: 35px;
-            p{
+
+            p {
                 width: 100%;
             }
         }
-        &-vibers{
+
+        &-vibers {
             font-weight: 500;
             color: rgba($color: #FFFFFF, $alpha: .7);
             font-size: 24px;
-            @media (max-width: 1000px){
+
+            @media (max-width: 1000px) {
                 font-weight: 400;
                 font-size: 14px;
             }
         }
-        &-title{
+
+        &-title {
             font-size: 96px;
             line-height: 96px;
             max-width: 800px;
-            @media (max-width: 1000px){
+
+            @media (max-width: 1000px) {
                 line-height: 44px;
                 font-size: 41px;
             }
         }
-        &-subtitle{
+
+        &-subtitle {
             font-weight: 600;
             font-size: 24px;
             max-width: 277px;
-            @media (max-width: 1000px){
+
+            @media (max-width: 1000px) {
                 font-weight: 500;
                 font-size: 16px;
             }
         }
-        &-description{
+
+        &-description {
             max-width: 266px;
             font-size: 16px;
             color: rgba($color: #FFFFFF, $alpha: .7);
-            span{
+
+            span {
                 font-weight: 700;
                 color: rgba($color: #FFFFFF, $alpha: .7);
             }
-            @media (max-width: 1000px){
+
+            @media (max-width: 1000px) {
                 font-size: 14px;
             }
         }
     }
-    &__decor{
+
+    &__decor {
         width: 40%;
         height: 100px;
-        @media (max-width: 1000px){
+
+        @media (max-width: 1000px) {
             order: 2;
         }
     }

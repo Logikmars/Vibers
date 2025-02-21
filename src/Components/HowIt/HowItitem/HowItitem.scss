@@ -1,4 +1,4 @@
-.HowItitem{
+.HowItitem {
     width: calc(33% - 26px);
     display: flex;
     flex-wrap: wrap;
@@ -11,23 +11,32 @@
     border-radius: 24px;
     border: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
     min-height: 400px;
-    @media (max-width: 920px){
+
+    @media (max-width: 1300px) {
+        width: calc(50% - 16px);
+    }
+
+    @media (max-width: 920px) {
         width: 100%;
     }
-    &__top{
+
+    &__top {
         width: 100%;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-        &-num{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-num {
             color: #11A950;
             font-size: 128px;
         }
     }
-    &__title{
+
+    &__title {
         font-size: 32px;
     }
-    &__description{
+
+    &__description {
         font-size: 18px;
         color: rgba($color: #FFFFFF, $alpha: 0.7);
         line-height: 24px;

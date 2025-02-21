@@ -1,18 +1,19 @@
-.HowIt{
+.HowIt {
     width: 95% !important;
     padding-top: 72px !important;
     display: flex;
     flex-wrap: wrap;
-    @media(max-width: 920px){
-        gap: 70px;
-    }
-    &__items{
+
+    gap: 30px;
+
+    &__items {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 26px;
         width: 100%;
-        @media (max-width: 920px){
+
+        @media (max-width: 1300px) {
             flex-wrap: wrap;
         }
     }
