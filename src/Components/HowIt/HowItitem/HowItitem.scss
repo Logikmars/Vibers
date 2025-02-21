@@ -1,0 +1,35 @@
+.HowItitem{
+    width: calc(33% - 26px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: url('/img/howitbg.svg'), linear-gradient(160deg, #000000 0%, #1B1B1B 50%, #000000 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px 24px;
+    border-radius: 24px;
+    border: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
+    min-height: 400px;
+    @media (max-width: 920px){
+        width: 100%;
+    }
+    &__top{
+        width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+        &-num{
+            color: #11A950;
+            font-size: 128px;
+        }
+    }
+    &__title{
+        font-size: 32px;
+    }
+    &__description{
+        font-size: 18px;
+        color: rgba($color: #FFFFFF, $alpha: 0.7);
+        line-height: 24px;
+    }
+}
