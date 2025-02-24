@@ -10,11 +10,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 26px;
+        gap: 32px;
         width: 100%;
+        position: relative;
+        z-index: 1;
 
         @media (max-width: 1300px) {
             flex-wrap: wrap;
         }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
     }
 }

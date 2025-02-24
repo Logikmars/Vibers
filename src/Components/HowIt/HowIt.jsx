@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './HowIt.scss';
 import HowItitem from './HowItitem/HowItitem';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,36 +30,38 @@ const items = [
 ];
 
 export default () => {
-    
     const containerRef = useRef(null);
 
-    useEffect(() => {
-        const elements = containerRef.current.querySelectorAll('.HowItitem');
-
-        elements.forEach((el, index) => {
-            gsap.fromTo(el, 
-                { x: -100, opacity: 0 },
-                {
-                    x: 0, opacity: 1, duration: 1,
-                    scrollTrigger: {
-                        trigger: el,
-                        markers: false,
-                        start: "top 85%",
-                        toggleActions: "play none none none",
+    useGSAP(
+        () => {
+            for (let i = 0; i < 3; i++) {
+                gsap.fromTo(`.showEl-${i}`,
+                    { x: -100, opacity: 0 },
+                    {
+                        x: 0, opacity: 1,
+                        scrollTrigger: {
+                            trigger: '.HowIt__items',
+                            // markers: true,
+                            scrub: 1,
+                            start: `${(i) * 150}px 80%`,
+                            end: `${(i) * 150}px 80%`
+                        }
                     }
-                }
-            );
-        });
+                );
+            }
 
-    }, []);
+        },
+        { scope: containerRef }
+    )
 
     return (
-    <div className='HowIt container' ref={containerRef}>
-        <h2 className='HowIt__title title'>How It Works</h2>
-        <div className='HowIt__items'>
-            {items.map((item, index)=>(
-                <HowItitem key={index} num={item.num} imgsrc={item.imgsrc} title={item.title} description={item.description} />
-            ))}
+        <div className='HowIt container' ref={containerRef}>
+            <h2 className='HowIt__title title'>How It Works</h2>
+            <div className='HowIt__items'>
+                {items.map((item, index) => (
+                    <HowItitem className={`showEl-${index}`} ind={10 - index} key={index} num={item.num} imgsrc={item.imgsrc} title={item.title} description={item.description} />
+                ))}
+            </div>
         </div>
-    </div>
-)}
+    )
+}

@@ -47,7 +47,7 @@ const BallPit = ({ width = 800, height = 600 }) => {
                 height / 2 + (Math.random() - 0.5) * height * 0.2,
                 radius,
                 {
-                    restitution: 0.9,
+                    restitution: 1.1,
                 }
             );
             ball.render = {
