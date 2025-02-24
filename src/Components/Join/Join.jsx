@@ -25,7 +25,7 @@ export default () => {
                         trigger: whatIs,
                         start: 'top 80%',
                         end: 'top 80%',
-                        scrub: 1,
+                        scrub: 5,
                         // markers: true
                     },
                 }

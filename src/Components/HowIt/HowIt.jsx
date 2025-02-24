@@ -42,7 +42,7 @@ export default () => {
                         scrollTrigger: {
                             trigger: '.HowIt__items',
                             // markers: true,
-                            scrub: 1,
+                            scrub: 3,
                             start: `${(i) * 150}px 80%`,
                             end: `${(i) * 150}px 80%`
                         }
